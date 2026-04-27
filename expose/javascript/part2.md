@@ -21,3 +21,56 @@
 10. Line 12 prints `3`. The variable `length` is declared near the top of the function, outside the loop, so it is still accessible at line 12. Since the input array has 3 items, `length` is 3.
 
 11. The function returns `[50, 100, 150]`. The array `discounted` is declared with `const`, but we are not reassigning the array itself. We are only adding values into it with `.push()`, which is allowed.
+12.
+
+A. `student.name`
+
+B. `student['Grad Year']`
+
+C. `student.greeting()`
+
+D. `student['Favorite Teacher'].name`
+
+E. `student.courseLoad[0]`
+13. Arithmetic
+
+A. `'3' + 2` outputs `'32'`. The `+` operator with a string causes string concatenation, so `2` becomes a string.
+
+B. `'3' - 2` outputs `1`. The `-` operator forces `'3'` to become a number, so it becomes `3 - 2`.
+
+C. `3 + null` outputs `3`. In numeric conversion, `null` becomes `0`.
+
+D. `'3' + null` outputs `'3null'`. Since one side is a string, JavaScript does string concatenation.
+
+E. `true + 3` outputs `4`. `true` converts to `1`, so the result is `1 + 3`.
+
+F. `false + null` outputs `0`. `false` converts to `0`, and `null` also converts to `0`.
+
+G. `'3' + undefined` outputs `'3undefined'`. Since one side is a string, JavaScript concatenates them.
+
+H. `'3' - undefined` outputs `NaN`. The `-` operator tries to convert both sides to numbers, but `undefined` becomes `NaN`.
+
+14. Comparison
+
+A. `'2' > 1` outputs `true`. The string `'2'` is converted to the number `2`, and `2 > 1` is true.
+
+B. `'2' < '12'` outputs `false`. Since both values are strings, JavaScript compares them alphabetically. Since `'2'` comes after `'1'`, the result is false.
+
+C. `2 == '2'` outputs `true`. The `==` operator allows type conversion, so `'2'` becomes `2`.
+
+D. `2 === '2'` outputs `false`. The `===` operator checks both value and type, and one is a number while the other is a string.
+
+E. `true == 2` outputs `false`. `true` converts to `1`, and `1 == 2` is false.
+
+F. `true === Boolean(2)` outputs `true`. `Boolean(2)` becomes `true`, and both sides are booleans with the same value.
+
+15. The `==` operator compares values after allowing type conversion, so values with different types can still be considered equal. The `===` operator compares both value and type, so it is stricter and does not do type conversion. In most cases, `===` is safer to use because it avoids unexpected type conversion.
+17. The result is `[2, 4, 6]`. The `modifyArray` function loops through `[1, 2, 3]` and applies the callback function `doSomething` to each value. Since `doSomething` returns `num * 2`, the values become `1 * 2 = 2`, `2 * 2 = 4`, and `3 * 2 = 6`. These new values are pushed into `newArr`, so the function returns `[2, 4, 6]`.
+19. The output is:
+
+1
+4
+3
+2
+
+First, `console.log(1)` runs immediately. Then the two `setTimeout` functions are scheduled, but they do not run right away. After that, `console.log(4)` runs immediately. The `setTimeout` with `0` milliseconds runs next and prints `3`. Finally, the `setTimeout` with `1000` milliseconds runs after about one second and prints `2`.
