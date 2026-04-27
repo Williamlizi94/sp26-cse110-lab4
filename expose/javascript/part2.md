@@ -21,6 +21,7 @@
 10. Line 12 prints `3`. The variable `length` is declared near the top of the function, outside the loop, so it is still accessible at line 12. Since the input array has 3 items, `length` is 3.
 
 11. The function returns `[50, 100, 150]`. The array `discounted` is declared with `const`, but we are not reassigning the array itself. We are only adding values into it with `.push()`, which is allowed.
+
 12.
 
 A. `student.name`
@@ -32,6 +33,7 @@ C. `student.greeting()`
 D. `student['Favorite Teacher'].name`
 
 E. `student.courseLoad[0]`
+
 13. Arithmetic
 
 A. `'3' + 2` outputs `'32'`. The `+` operator with a string causes string concatenation, so `2` becomes a string.
@@ -65,7 +67,9 @@ E. `true == 2` outputs `false`. `true` converts to `1`, and `1 == 2` is false.
 F. `true === Boolean(2)` outputs `true`. `Boolean(2)` becomes `true`, and both sides are booleans with the same value.
 
 15. The `==` operator compares values after allowing type conversion, so values with different types can still be considered equal. The `===` operator compares both value and type, so it is stricter and does not do type conversion. In most cases, `===` is safer to use because it avoids unexpected type conversion.
+
 17. The result is `[2, 4, 6]`. The `modifyArray` function loops through `[1, 2, 3]` and applies the callback function `doSomething` to each value. Since `doSomething` returns `num * 2`, the values become `1 * 2 = 2`, `2 * 2 = 4`, and `3 * 2 = 6`. These new values are pushed into `newArr`, so the function returns `[2, 4, 6]`.
+
 19. The output is:
 
 1
